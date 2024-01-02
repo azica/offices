@@ -1,0 +1,145 @@
+.steps {
+    display: inline-flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 12px;
+    background: $white;
+    box-shadow:
+        0px 2px 8px 0px rgba($shadowDark, 0.05),
+        0px 0px 14px 0px rgba($shadowDark, 0.04);
+    gap: 12px;
+}
+
+.stepsNumber {
+    text-align: center;
+    @include text14($MGrey);
+    display: flex;
+    width: 56px;
+    height: 56px;
+    padding: 20px 0 20px 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: $greyBg;
+    position: relative;
+}
+
+.stepsDescr {
+    text-align: center;
+    @include text14($MGrey);
+    width: 100%;
+}
+
+.stepsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+}
+
+.stepsLine {
+    display: block;
+    position: relative;
+    padding: 8px 0;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 18px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $Grey;
+    }
+}
+
+.step1:nth-child(1) {
+
+    .stepsNumber,
+    .stepsDescr,
+    .stepsLine {
+        color: $black;
+
+        &::before {
+            background-color: $black;
+        }
+    }
+}
+
+.step2:nth-child(1) {
+    .stepsNumber {
+        background-color: $main;
+        color: $white;
+    }
+
+    .stepsDescr,
+    .stepsLine {
+        color: $main;
+
+        &::before {
+            background-color: $black;
+        }
+    }
+}
+
+.step2:nth-child(2) {
+
+    .stepsNumber,
+    .stepsDescr,
+    .stepsLine {
+        color: $black;
+
+        &::before {
+            background-color: $black;
+        }
+    }
+}
+
+.step3:nth-child(1),
+.step3:nth-child(2) {
+    .stepsNumber {
+        background-color: $main;
+        color: $white;
+    }
+
+    .stepsDescr,
+    .stepsLine {
+        color: $main;
+
+        &::before {
+            background-color: $black;
+        }
+    }
+}
+
+.step3:nth-child(3) {
+
+    .stepsNumber,
+    .stepsDescr,
+    .stepsLine {
+        color: $black;
+
+        &::before {
+            background-color: $black;
+        }
+    }
+}
+
+.step4 {
+    .stepsNumber {
+        background-color: $main;
+        color: $white;
+    }
+
+    .stepsDescr,
+    .stepsLine {
+        color: $main;
+
+        &::before {
+            background-color: $black;
+        }
+    }
+}

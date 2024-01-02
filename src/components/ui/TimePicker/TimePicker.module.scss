@@ -1,0 +1,65 @@
+.timePicker {
+	position: relative;
+	color: $black;
+	border: 1px solid $Grey;
+	border-radius: 11px;
+	display: inline-flex;
+	width: 100px;
+	padding: 15px;
+	align-items: flex-start;
+	cursor: pointer;
+
+	& div {
+		border: none !important;
+		outline: none !important;
+	}
+
+	&.disabled {
+		border-color: $LGrey;
+		background: $greyBg;
+	}
+
+}
+
+.input {
+	display: inline-block;
+	color: $black;
+	font-family: $fontDefault;
+	font-size: 1rem;
+	line-height: 1.36rem;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease-in;
+	width: 60px;
+
+	&[data-te-timepicker-input]::placeholder {
+		color: $black;
+	}
+
+	&:disabled::placeholder {
+		color: $MGrey;
+	}
+}
+
+[data-te-timepicker-elements-wrapper] {
+	& > div:nth-child(1) {
+		background-color: $main;
+	}
+}
+
+[data-te-timepicker-hand-pointer],
+[data-te-timepicker-middle-dot],
+[data-te-timepicker-circle] {
+	background-color: $main !important;
+}
+
+[data-te-timepicker-circle] {
+	border-color: $main !important;
+}
+
+[data-te-timepicker-clear],
+[data-te-timepicker-cancel],
+[data-te-timepicker-submit] {
+	color: $black !important;
+	font-family: $fontDefaultSemibold;
+}

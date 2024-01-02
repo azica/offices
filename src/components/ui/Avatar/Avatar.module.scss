@@ -1,0 +1,69 @@
+.avatar {
+    @include flexCenter();
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba($darkBlue, 0.04);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+
+    &.noImage {
+        background-color: $lightBlue;
+    }
+
+    &.big {
+        width: 54px;
+        height: 54px;
+    }
+
+    &.medium {
+        width: 46px;
+        height: 46px;
+    }
+
+    &.small {
+        width: 38px;
+        height: 38px;
+
+        .avatarName {
+            font-size: 0.875rem;
+
+        }
+    }
+
+    &.sx {
+        width: 20px;
+        height: 20px;
+
+        .avatarName {
+            font-size: 0.6rem !important;
+        }
+    }
+}
+
+.avatarInput {
+    display: none;
+}
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    transition: all .7s ease-in-out;
+}
+
+.avatarSvg {
+    max-width: 30px;
+    height: auto;
+    margin: 5px 10px;
+    transition: all .7s ease-in-out;
+}
+
+.avatarName {
+    color: $white;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: $fontDefaultBold;
+    line-height: 1.5rem;
+}

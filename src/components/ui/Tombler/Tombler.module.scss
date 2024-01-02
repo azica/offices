@@ -1,0 +1,76 @@
+.tombler {
+    display: inline-flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    &.labelRight {
+        flex-flow: row-reverse;
+    }
+}
+
+.tomblerChecked .tomblerLabelText {
+    color: $green;
+}
+
+.tomblerLabelText {
+    color: $MGrey;
+    font-size: 1rem;
+    font-family: $fontDefaultMedium;
+    line-height: 1.375rem;
+}
+
+.tomblerInputGroup {
+    display: inline-flex;
+}
+
+.tomblerInput {
+    display: none;
+}
+
+.tomblerInput:checked+.tomblerLabel {
+    background-color: $green;
+
+    &::before {
+        background-color: $main;
+    }
+}
+
+.tomblerInput:checked+.tomblerLabel::after {
+    transform: translateX(16px);
+}
+
+.tomblerInput:disabled+.tomblerLabel {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.tomblerLabel {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    width: 40px;
+    height: 24px;
+    background-color: $MGrey;
+    border-radius: 30px;
+    transition: all 0.3s;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    &::after {
+        top: 3px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+        background-color: $white;
+        border-radius: 100%;
+        transition: all 0.3s;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    }
+}

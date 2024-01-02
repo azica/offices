@@ -1,0 +1,38 @@
+.complexity {
+    display: inline-flex;
+    padding: 6px 8px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    font-family: $fontDefaultSemibold;
+    font-size: 0.688rem;
+    line-height: 0.688rem;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+
+    svg {
+        width: 8px;
+        height: 14px;
+    }
+
+    &.notSelected {
+        background: $greyBg;
+        color: $MGrey;
+    }
+
+    &.type_1 {
+        background: rgb($green, 10%);
+        color: $green;
+    }
+
+    &.type_2 {
+        background: rgb($med, 10%);
+        color: $med;
+    }
+
+    &.type_3 {
+        background: rgb($red, 10%);
+        color: $red;
+    }
+
+}

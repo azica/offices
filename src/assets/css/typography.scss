@@ -1,0 +1,22 @@
+h2 {
+    font-size: 2rem!important;
+    font-family: $fontDefaultMedium;
+    line-height: 100%;
+}
+:global(h4.med) {
+    font-family: $fontDefaultMedium;
+    font-size: 1.5rem!important;
+    line-height: 1.1rem;
+}
+h4 {
+    font-size: 1.5rem!important;
+    line-height: 1.89rem;
+}
+h5 {
+    font-size: 1.125rem!important;
+    line-height: 1.5rem;
+}
+h6 {
+    font-size: 1.125rem!important;
+    line-height: 1.5rem;
+}

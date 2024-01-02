@@ -1,0 +1,274 @@
+.input {
+	position: relative;
+}
+
+.wrap {
+	width: 100%;
+	background: $white;
+	border: 1px solid $Grey;
+	border-radius: 11px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-in;
+
+	&:focus-within {
+		background: $white;
+		border: 1px solid $main;
+	}
+
+	&:hover {
+		border: 1px solid $main;
+	}
+
+	svg {
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		z-index: 1;
+		width: 25.6px;
+		height: 24px;
+		cursor: pointer;
+		transition: all 0.2s ease-in;
+
+		.right {
+			left: 14px;
+			right: inherit;
+		}
+	}
+
+	&.small {
+		padding: 6px 6px 6px 34px;
+		border-radius: 12px;
+
+		& input {
+			font-family: $fontDefault;
+			font-size: 0.875rem;
+			line-height: 1.138rem;
+			padding: 0;
+		}
+
+		& svg {
+			left: 8px;
+			right: inherit;
+			top: 5px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+	&.unactive {
+		background: $greyBg;
+	}
+}
+
+.error {
+	border-color: $red;
+	color: $black;
+}
+
+.errorText {
+	position: absolute;
+	top: 100%;
+	margin-top: 8px;
+	left: 0;
+	display: block;
+	@include text14($red);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .3s ease;
+
+	&:hover {
+		overflow: visible;
+	}
+}
+
+.disabled {
+	border: 1px solid $LGrey;
+	background: $greyBg;
+
+	input {
+		color: $MGrey;
+	}
+}
+
+.fileWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	color: $main;
+	padding: 16px 0px;
+	gap: 10px;
+	border: 1px dashed $main;
+	background: $white;
+
+	.field {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		padding: 14px 0;
+		cursor: pointer;
+		height: 100%;
+	}
+
+	.placeholder {
+		color: $main;
+		font-family: $fontDefaultMedium;
+		font-size: 0.875rem;
+		line-height: 1.125rem;
+	}
+
+	svg {
+		margin: 0;
+		color: $main;
+		position: relative;
+		top: inherit;
+		right: inherit;
+	}
+
+	&:focus-within {
+		border-color: $main;
+	}
+
+	&:invalid {
+		border-color: $red;
+	}
+}
+
+.field {
+	padding: 16px;
+	font-size: 1rem;
+	line-height: 1.36rem;
+	width: 100%;
+	height: 100%;
+	border: none;
+	transition: all 0.3s ease;
+	font-family: $fontDefault;
+	color: $black;
+
+	&::placeholder {
+		color: $MGrey;
+	}
+
+	&:focus,
+	&:hover {
+		background: transparent;
+	}
+
+	&:focus-within,
+	&:active {
+		color: $black;
+	}
+}
+
+.file {
+	font-size: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.label {
+	font-size: 0.875rem;
+	line-height: 1.3rem;
+	color: $black;
+	margin-bottom: 8px;
+	position: relative;
+	padding-right: 13px;
+	@include flexCenterBetween();
+
+	a {
+		margin-left: auto;
+		color: $main;
+		text-align: right;
+	}
+
+}
+
+.labelMarked {
+	position: relative;
+	width: fit-content;
+
+	&::after {
+		position: absolute;
+		top: '';
+		content: '*';
+		color: $red;
+		right: 0;
+	}
+}
+
+.labelPassword {
+	font-size: 0.875rem;
+	line-height: 1.3rem;
+}
+
+.col12 {
+	width: 100%;
+	flex: 100%;
+}
+
+.col6 {
+	width: 50%;
+}
+
+.col8 {
+	width: calc((100% / 3) * 2 - 1rem)
+}
+
+.col4 {
+	width: calc((100% / 3 - 1rem));
+}
+
+.deactive {
+	&>div {
+		background: $greyBg;
+		border-color: $LGrey;
+
+		input {
+			color: $MGrey;
+		}
+	}
+}
+
+.inputIcon {
+	color: $MGrey;
+}
+
+.big .label {
+	font-size: 1rem;
+	line-height: 1.36rem;
+}
+
+.errorTooltip {
+	position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    gap: 7px;
+    height: 44px;
+   
+	.errorTextTooltip {
+		color: $black;
+		font-family: $fontDefault;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		border: 1px solid #D9D9D9;
+	}
+	svg {
+		width: 24px;
+height: 24px;
+	}
+}
+	
+

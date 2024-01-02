@@ -1,0 +1,41 @@
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+	transition: all 0.5s ease-in-out;
+
+	svg {
+		width: 12px;
+		height: 12px;
+		transform: translateX(-50%);
+		position: absolute;
+		right: 50%;
+		top: -8.485px;
+		transition: opacity 0.5s ease-in-out;
+	}
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  z-index: 10;
+  display: block;
+	display: inline-flex;
+	padding: 8px 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	border-radius: 8px;
+	background: rgba(30, 26, 36, 0.80);
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 14px 0px rgba(0, 0, 0, 0.04);
+	color: $white;
+	font-size: 0.813rem;
+	font-family: $fontDefaultMedium;
+	line-height: 1.125rem;
+	opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+	&.show {
+		opacity: 1;
+	}
+}

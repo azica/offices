@@ -1,0 +1,100 @@
+@import 'vars';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul,
+ol,
+figure {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    &:focus {
+        overflow: unset;
+    }
+}
+input, textarea {
+    outline: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+button,
+select {
+    text-transform: none;
+    outline: none;
+    border: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+    display: none;
+}
+picture,
+img {
+    display: block;
+    max-width: 100%;
+}
+
+address {
+    font-style: normal;
+}

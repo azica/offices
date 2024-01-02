@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  width: 268px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 12px 0px 0px 12px;
+  border: 1px solid $LGrey;
+  background: $dark-grey;
+  flex-shrink: 0;
+
+  &.scroll {
+    padding: 12px 0 48px 12px;
+    position: relative;
+
+    .list {
+      overflow-y: auto;
+      padding-bottom: 8px;
+      @include scrollbar;
+    }
+
+    .listItem {
+      margin-right: 12px;
+    }
+  }
+}
+
+.list {
+  display: block;
+  width: 100%;
+
+  
+}
+
+.listItem {
+  display: flex;
+  padding: 16px 24px;
+  gap: 8px;
+  font-family: $fontDefaultMedium;
+  color: $DGrey;
+  font-size: 1rem;
+  line-height: 1.36rem;
+  transition: all .25s ease-in-out;
+  border-radius: 10px;
+
+  span {
+    display: inline-block;
+    padding: 2px 6px;
+    margin-left: 10px;
+    border-radius: 30px;
+    border: 1px solid $LGrey;
+    background: $white;
+    @include text14($DGrey);
+  }
+
+  &:hover {
+    background: rgba($white, 0.5);
+  }
+
+  &.active {
+    background: $white;
+    color: $black;
+  }
+}

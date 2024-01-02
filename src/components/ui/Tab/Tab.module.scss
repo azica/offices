@@ -1,0 +1,61 @@
+.tab {
+    display: inline-flex;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    line-height: 1.5rem;
+
+    &.hasText {
+        position: relative;
+        padding: 6px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 10px;
+        background: $greyBg;
+        color: $DGrey;
+        font-size: 0.875rem;
+        font-family: $fontDefaultMedium;
+
+        &.number {
+            color: $MGrey;
+        }
+    }
+
+    &.active {
+        background: $main;
+        color: $white;
+
+        &.number {
+            color: $LGrey;
+        }
+
+        &.notific {
+            &:after {
+                position: absolute;
+                content: '';
+                top: -2px;
+                right: -2px;
+                width: 10px;
+                height: 10px;
+                border-radius: 8px;
+                background: $red;
+                box-shadow: 0px 2px 6px 0px rgba(242, 59, 46, 0.68);
+            }
+        }
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s ease-out;
+    }
+
+    &.noText.active {
+        background-color: $white;
+        color: $black;
+
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+}

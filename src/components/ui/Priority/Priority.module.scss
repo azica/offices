@@ -1,0 +1,46 @@
+.priority {
+    display: inline-flex;
+    padding: 7px 8px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+
+    font-family: $fontDefaultSemibold;
+    font-size: 0.688rem;
+    line-height: 0.688rem;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+
+    span {
+        width: 6px;
+        height: 6px;
+        border-radius: 2px;
+    }
+
+    &.priority_1 {
+        color: $hightPriory;
+        background: rgb($hightPriory, 10%);
+
+        span {
+            background: $hightPriory;
+        }
+    }
+
+    &.priority_2 {
+        color: $medPriory;
+        background: rgb($medPriory, 10%);
+
+        span {
+            background: $medPriory;
+        }
+    }
+
+    &.priority_3 {
+        color: $lowPriory;
+        background: rgb($lowPriory, 10%);
+
+        span {
+            background: $lowPriory;
+        }
+    }
+}

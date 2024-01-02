@@ -1,0 +1,55 @@
+.pagination {
+    display: inline-flex;
+    align-items: flex-start;
+    margin: 24px 0 103px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &_inner {
+        border-radius: 10px;
+        background: $white;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.item {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include text16($DGrey);
+    padding: 7px;
+    background: $white;
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        color: $main;
+    }
+}
+
+.active {
+    background: $main;
+    color: $white;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 rgba(58, 139, 236, 0.3);
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.arrow {
+    color: $black;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+}

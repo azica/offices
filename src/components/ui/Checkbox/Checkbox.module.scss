@@ -1,0 +1,60 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover .checkboxInput~.checkboxCheckmark {
+        border-color: $main;
+    }
+
+    &:hover .checkboxInput:checked~.checkboxCheckmark {
+        background: $main-hover;
+        border-color: $main-hover;
+    }
+}
+
+.checkboxInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked~.checkboxCheckmark {
+        background: $main;
+        border-color: $main;
+    }
+}
+
+.checkboxCheckmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    color: $white;
+    border-radius: 6px;
+    border: 1px solid $Grey;
+    transition: all 0.3s;
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-radius: 6px;
+    }
+
+    svg {
+        position: relative;
+        z-index: 1;
+        width: 22px;
+        height: 22px;
+        transform: translate(-1px, -1px);
+    }
+}

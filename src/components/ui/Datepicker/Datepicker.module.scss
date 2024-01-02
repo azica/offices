@@ -1,0 +1,125 @@
+.datePicker {
+	transition: all 0.3s ease-in;
+	position: relative;
+	font-family: $fontDefaultMedium;
+}
+
+.inputWrap {
+	border: 1px solid $Grey;
+	border-radius: 11px;
+	position: relative;
+	overflow: hidden;
+
+	div[data-te-input-notch-ref]>div {
+		border-width: 0 !important;
+	}
+
+	&:focus-within {
+		border-color: $main;
+	}
+
+	&:invalid {
+		border-color: $red;
+	}
+
+	button>svg {
+		display: none;
+	}
+
+	button {
+		width: 24px;
+		height: 24px;
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 24px;
+			height: 24px;
+			top: 0;
+			left: 0;
+			background: url("./calendar.svg");
+		}
+	}
+}
+
+.input {
+	cursor: pointer;
+	padding: 16px;
+	font-size: 1rem;
+	line-height: 1.36rem;
+	width: 100%;
+	height: 100%;
+	border: none;
+	transition: all 0.3s ease;
+	color: $DGrey !important;
+
+	&::placeholder {
+		color: $DGrey;
+	}
+
+	&:focus,
+	&:hover {
+		background: transparent;
+	}
+
+	&:focus-within,
+	&:active {
+		color: $black;
+	}
+}
+
+.label {
+	font-size: 0.875rem;
+	line-height: 1.3rem;
+	color: $black;
+	margin-bottom: 8px;
+	position: relative;
+	padding-right: 13px;
+	display: block;
+}
+
+.labelMarked {
+	position: relative;
+	width: fit-content;
+
+	&::after {
+		position: absolute;
+		top: '';
+		content: '*';
+		color: $red;
+		right: 0;
+	}
+}
+
+.error {
+	border-color: $red;
+	color: $black;
+}
+
+.errorText {
+	position: absolute;
+	top: 100%;
+	margin-top: 8px;
+	left: 0;
+	display: block;
+	@include text14($red);
+}
+
+.datepickerFooterBtn {
+	@include bgShadow1Radius();
+	color: $black !important;
+	font-family: $fontDefaultMedium;
+}
+
+div[data-te-datepicker-modal-container-ref] {
+	font-family: $fontDefault;
+
+	button {
+		font-family: $fontDefaultMedium !important;
+	}
+}
+
+div[data-te-datepicker-header] {
+	background-color: $main;
+	font-family: $fontDefaultMedium;
+}

@@ -1,0 +1,160 @@
+.item {
+    display: inline-flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    border-radius: 12px;
+    background: $greyBg;
+    width: 196px;
+    height: 222px;
+    transition: all .3s ease-in;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        border-radius: 12px;
+        transition: all .3s ease-in;
+        z-index: 1;
+    }
+
+    &:hover::after {
+        border: 5px solid rgba(146, 47, 181, 0.40);
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
+
+    .pdfWrap {
+        display: flex;
+        width: 180px;
+        height: 180px;
+        padding: 75px 62px 49px 62px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .pdfFile {
+        width: 56px;
+        height: 56px;
+    }
+
+    img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 6px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .name {
+        color: $black;
+        font-family: $fontDefaultMedium;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+        width: 180px;
+        white-space: nowrap;
+    }
+
+    button {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        border-radius: 8px;
+        background: $white;
+        z-index: 10;
+    }
+
+    .checkedIcon {
+        color: $main;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        border-radius: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: content-box;
+        background-color: $white;
+        z-index: 1;
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+}
+
+.modal {
+    background-color: transparent;
+    // max-height: 532px;
+    // max-width: 532px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    &>button:first-child {
+        display: none;
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .closeButton,
+    .fileButton {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid $LGrey;
+        background: $white;
+        align-self: flex-end;
+        margin-bottom: 20px;
+        padding: 6px;
+
+        svg {
+            stroke: $DGrey;
+        }
+    }
+}
+
+.modalImage {
+    // width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+        width: min-content;
+        height: min-content;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        max-height:100%;
+    }
+
+}
